@@ -1,0 +1,43 @@
+@import '../../styles/variables.css';
+
+.card {
+    min-height: 12.5rem;
+    display: grid;
+    padding: 1.25rem;
+    background-color: var(--clr-neutral-0);
+    border: 1px solid var(--clr-neutral-300);
+    border-radius: 1rem;
+}
+
+.card[data-theme='dark'] {
+    background-color: var(--clr-neutral-800);
+    border-color: var(--clr-neutral-600);
+}
+
+.info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.125rem;
+}
+
+.name {
+    font-weight: var(--fw-bold);
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.decription {
+    color: var(--clr-neutral-600);
+    font-size: 0.875rem;
+}
+
+.decription[data-theme='dark'] {
+    color: var(--clr-neutral-300);
+}
+
+.controls {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

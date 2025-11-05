@@ -1,0 +1,110 @@
+.button {
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-0);
+
+    border: 1px solid var(--clr-neutral-300);
+    border-radius: 2rem;
+
+    padding: 0.375rem 0.75rem;
+}
+
+.button:focus {
+    outline: 2px solid var(--clr-red-500);
+    outline-offset: 2px;
+
+    background-color: var(--clr-neutral-100);
+    border-color: var(--clr-neutral-100);
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.button[data-theme='dark'] {
+    color: var(--clr-neutral-0);
+    background-color: var(--clr-neutral-800);
+    border-color: var(--clr-neutral-600)
+}
+
+.button[data-theme='dark']:focus {
+    background-color: var(--clr-neutral-700);
+    border-color: var(--clr-neutral-700);
+}
+
+/* primary */
+
+.primary:hover,
+.primary[data-theme='dark']:hover {
+    cursor: pointer;
+    color: var(--clr-neutral-0);
+    background-color: var(--clr-red-700);
+    border-color: var(--clr-red-700);
+}
+
+/* toggle */
+
+.toggle:hover {
+    cursor: pointer;
+    color: var(--clr-neutral-300);
+    background-color: var(--clr-neutral-50);
+}
+
+.toggle[data-theme='dark']:hover {
+    color: var(--clr-neutral-0);
+    background-color: var(--clr-neutral-600);
+}
+
+.toggle-pressed,
+.toggle-pressed[data-theme='dark'] {
+    color: var(--clr-neutral-0);
+    background-color: var(--clr-red-700);
+    border-color: var(--clr-red-700);
+}
+
+.toggle-pressed:focus:not(:focus-visible),
+.toggle-pressed[data-theme='dark']:focus:not(:focus-visible) {
+    color: var(--clr-neutral-0);
+    background-color: var(--clr-red-700);
+    border-color: var(--clr-red-700);
+}
+
+.toggle-pressed:focus-visible,
+.toggle-pressed[data-theme='dark']:focus-visible {
+    color: var(--clr-neutral-0);
+    background-color: var(--clr-red-700);
+    border-color: var(--clr-red-700);
+}
+
+/* theme */
+
+.theme {
+    cursor: pointer;
+
+    width: 55px;
+    height: 55px;
+
+    background-color: var(--clr-neutral-100);
+    border-color: var(--clr-neutral-100);
+
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.3s ease;
+}
+
+.theme:hover {
+    background-color: var(--clr-neutral-300);
+}
+
+.theme[data-theme='dark'] {
+    background-color: var(--clr-neutral-700);
+    border-color: var(--clr-neutral-700);
+}
+
+.theme[data-theme='dark']:hover {
+    background-color: var(--clr-neutral-600);
+}

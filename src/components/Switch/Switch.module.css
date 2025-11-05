@@ -1,0 +1,83 @@
+@import '../../styles/variables.css';
+
+input:where([type="checkbox"][role="switch"]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    position: relative;
+
+    font-size: inherit;
+    width: 2em;
+    height: 1em;
+
+    box-sizing: content-box;
+    border: 1px solid;
+    border-radius: 1em;
+
+    vertical-align: text-bottom;
+
+    color: inherit;
+}
+
+input:where([type="checkbox"][role="switch"])::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    box-sizing: border-box;
+    width: 0.7em;
+    height: 0.7em;
+    margin: 0 0.15em;
+
+    background: currentcolor;
+
+    border: 1px solid;
+    border-radius: 50%;
+
+    transition: left 0.3s ease;
+}
+
+input:where([type="checkbox"][role="switch"]):checked::before {
+  left: 1em;
+}
+
+.switch {
+    width: 2.125em;
+    height: 1.125em;
+
+    background-color: var(--clr-neutral-300);
+    border-color: var(--clr-neutral-300);
+}
+
+.switch:checked {
+    background-color: var(--clr-red-700);
+    border-color: var(--clr-red-700);
+}
+
+.switch::before {
+    width: 1em;
+    height: 1em;
+    margin: 0 0.1em;
+    background-color: var(--clr-neutral-0);
+    border: 0px;
+}
+
+.switch:checked::before {
+    left: 0.875em;
+}
+
+.switch:hover {
+    cursor: pointer;
+}
+
+.switch:focus {
+    outline: 2px solid var(--clr-red-500);
+}
+
+.switch:focus:not(:focus-visible) {
+    outline: none;
+}

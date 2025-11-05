@@ -1,0 +1,15 @@
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.fs-xl {
+    font-size: var(--fs-xl);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
